@@ -1,33 +1,36 @@
+<!DOCTYPE html>
 <html>
 <head> 
-<title> proyecto 1 </title>
+     <title> proyecto 1 </title>
 
 </head>
-<body>
 <body bgcolor="#95C9F1">
-<p><h1><font color="000000"><center>Bienvenido a la caluculadora de binarios</center></font></h1></p>
-<p1><h1>Ingresa un numero decimal (base 10):</h1></p1>
-<input type="number" id="decimal" placeholder="Ingrese un número decimal">
+     <p><h1><font color="000000"><center>Bienvenido a la caluculadora de binarios</center></font></h1></p>
+     <p><h1>Ingresa un numero decimal (base 10):</h1></p>
+     <input type="number" id="decimal" placeholder="Ingrese un número decimal">
 
   
-<button onclick="convertirDecimalABinario()>Convertir</button>
-<p1><h1>El numero en binario es (base 2):</h1></p1>
-<p><input type="text"  id="resultado" readonly></p>
+     <button onclick="convertirDecimalABinario()>Convertir</button>
+     <p><h1>El numero en binario es (base 2):</h1></p>
+     <p><input type="text"  id="resultado" readonly></p>
   
-<script>
-function convertirDecimalABinario() {
-var decimalInput = document.getElementById("decimal").value;
-var resultadoBinario = document.getElementById("resultado");
-// Verificar si se ingresó un número válido
-if (!isNaN(decimalInput)) {
-// Convertir el número decimal a binario
-var binario = (decimalInput >>> 0).toString(2);
-resultadoBinario.value = binario;
-} else {
-resultadoBinario.value = "Ingrese un número válido.";
-}
-}
-</script>
+     <script>
+        function convertirDecimalABinario() {
+            var decimalInput = document.getElementById("decimal").value;
+            var resultadoBinario = document.getElementById("resultado");
+
+            // Verificar si se ingresó un número válido
+            if (!isNaN(decimalInput)) {
+                // Convertir el número decimal a binario
+                var binario = (decimalInput >>> 0).toString(2);
+                resultadoBinario.value = binario;
+            } else {
+                resultadoBinario.value = "Ingrese un número válido.";
+            }
+        }
+    </script>
+</body>
+</html>
 
 
 <p><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1p4rYrxjVkj6v2eMzRhLfA?utm_source=generator" width="25%" height="200" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>
