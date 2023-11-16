@@ -1,37 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head> 
-     <title> proyecto 1 </title>
-
+     <title> Proyecto 1 </title>
 </head>
 <body bgcolor="#FFD0D0">
-     <div class="mod-indent-outer w-100" id="yui_3_17_2_1_1696139426170_29"><div class="mod-indent"></div><div id="yui_3_17_2_1_1696139426170_28"><div class="contentwithoutlink " id="yui_3_17_2_1_1696139426170_27"><div class="no-overflow" id="yui_3_17_2_1_1696139426170_26"><div class="no-overflow" id="yui_3_17_2_1_1696139426170_25"><div style="background-color: #A20909; padding: 4px;" id="yui_3_17_2_1_1696139426170_24">
-<h2 style="color: #fff !important; font-size: 1.9em; margin-left: 50px; text-shadow: 2px 2px gray;" id="yui_3_17_2_1_1696139426170_40">Bienvenidos a la calculadora de binarios&nbsp;</h2>
-</div></div></div></div></div></div>
+     <div class="mod-indent-outer w-100" id="yui_3_17_2_1_1696139426170_29">
+         <div class="mod-indent"></div>
+         <div id="yui_3_17_2_1_1696139426170_28">
+             <div class="contentwithoutlink " id="yui_3_17_2_1_1696139426170_27">
+                 <div class="no-overflow" id="yui_3_17_2_1_1696139426170_26">
+                     <div class="no-overflow" id="yui_3_17_2_1_1696139426170_25">
+                         <div style="background-color: #A20909; padding: 4px;" id="yui_3_17_2_1_1696139426170_24">
+                             <h2 style="color: #fff !important; font-size: 1.9em; margin-left: 50px; text-shadow: 2px 2px gray;" id="yui_3_17_2_1_1696139426170_40">Bienvenidos a la calculadora de bases numéricas</h2>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
     
-     <h2 style="color: #000000 !important; font-size: 1.9em; margin-left: 50px; text-shadow: 2px 2px gray;">Ingresa un numero decimal (base 10):&nbsp;</h2>
+     <h2 style="color: #000000 !important; font-size: 1.9em; margin-left: 50px; text-shadow: 2px 2px gray;">Ingresa un numero decimal (base 10):</h2>
      <input type="number" style="height: 80px;" size="60" id="decimal" placeholder="Ingrese un número decimal">
-
   
-     <button size="50" onclick="convertirDecimalABinario()">Convertir</button>
+     <button size="50" onclick="convertirDecimal()">Convertir</button>
 
-     <h2 style="color: #000000 !important; font-size: 1.9em; margin-left: 50px; text-shadow: 2px 2px gray;">El numero en binario es (base 2):&nbsp;</h2>
-     <input type="text" style="height: 80px;" size="60" id="resultado" placeholder="El resultado en binario" readonly>
+     <h2 style="color: #000000 !important; font-size: 1.9em; margin-left: 50px; text-shadow: 2px 2px gray;">El numero en binario es (base 2):</h2>
+     <input type="text" style="height: 80px;" size="60" id="resultadoBinario" placeholder="El resultado en binario" readonly>
+
+     <h2 style="color: #000000 !important; font-size: 1.9em; margin-left: 50px; text-shadow: 2px 2px gray;">El numero en hexadecimal es (base 16):</h2>
+     <input type="text" style="height: 80px;" size="60" id="resultadoHexadecimal" placeholder="El resultado en hexadecimal" readonly>
+
+     <h2 style="color: #000000 !important; font-size: 1.9em; margin-left: 50px; text-shadow: 2px 2px gray;">El numero en octal es (base 8):</h2>
+     <input type="text" style="height: 80px;" size="60" id="resultadoOctal" placeholder="El resultado en octal" readonly>
   
      <script>
-        function convertirDecimalABinario() {
+        function convertirDecimal() {
             var decimalInput = document.getElementById("decimal").value;
-            var resultadoBinario = document.getElementById("resultado");
+            var resultadoBinario = document.getElementById("resultadoBinario");
+            var resultadoHexadecimal = document.getElementById("resultadoHexadecimal");
+            var resultadoOctal = document.getElementById("resultadoOctal");
 
             if (!isNaN(decimalInput)) {
                 var binario = (decimalInput >>> 0).toString(2);
                 resultadoBinario.value = binario;
+
+                var hexadecimal = (decimalInput >>> 0).toString(16);
+                resultadoHexadecimal.value = hexadecimal.toUpperCase();
+
+                var octal = (decimalInput >>> 0).toString(8);
+                resultadoOctal.value = octal;
             } else {
                 resultadoBinario.value = "Ingrese un número válido.";
+                resultadoHexadecimal.value = "";
+                resultadoOctal.value = "";
             }
         }
     </script>
-<div class="mod-indent-outer w-100" id="yui_3_17_2_1_1696139426170_29"><div class="mod-indent"></div><div id="yui_3_17_2_1_1696139426170_28"><div class="contentwithoutlink " id="yui_3_17_2_1_1696139426170_27"><div class="no-overflow" id="yui_3_17_2_1_1696139426170_26"><div class="no-overflow" id="yui_3_17_2_1_1696139426170_25"><div style="background-color: #A20909; padding: 4px;" id="yui_3_17_2_1_1696139426170_24">
+    <div class="mod-indent-outer w-100" id="yui_3_17_2_1_1696139426170_29"><div class="mod-indent"></div><div id="yui_3_17_2_1_1696139426170_28"><div class="contentwithoutlink " id="yui_3_17_2_1_1696139426170_27"><div class="no-overflow" id="yui_3_17_2_1_1696139426170_26"><div class="no-overflow" id="yui_3_17_2_1_1696139426170_25"><div style="background-color: #A20909; padding: 4px;" id="yui_3_17_2_1_1696139426170_24">
 <h2 style="color: #fff !important; font-size: 1.9em; margin-left: 50px; text-shadow: 2px 2px gray;" id="yui_3_17_2_1_1696139426170_40">¿Qué son los numero binarios?&nbsp;</h2>
 </div></div></div></div></div></div>
 <p><h3>El sistema binario es un sistema numérico que utiliza solo dos símbolos o dígitos para representar valores y realizar operaciones matemáticas. Estos dos símbolos son el "0" y el "1". Es la base fundamental de la informática y la electrónica digital, ya que los sistemas electrónicos digitales utilizan señales eléctricas que pueden estar en uno de dos estados: encendido (representado por "1") o apagado (representado por "0").</h3></p>
@@ -46,6 +71,171 @@
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fGu0tM5u4b4?si=m7bWm8nh8r1-bFr7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3xGIXz2dza0?si=TJ5DXbPkbm8V_4yK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+<div class="mod-indent-outer w-100" id="yui_3_17_2_1_1696139426170_29">
+    <div class="mod-indent"></div>
+    <div id="yui_3_17_2_1_1696139426170_28">
+        <div class="contentwithoutlink " id="yui_3_17_2_1_1696139426170_27">
+            <div class="no-overflow" id="yui_3_17_2_1_1696139426170_26">
+                <div class="no-overflow" id="yui_3_17_2_1_1696139426170_25">
+                    <div style="background-color: #A20909; padding: 4px;" id="yui_3_17_2_1_1696139426170_24">
+                        <h2 style="color: #fff !important; font-size: 1.9em; margin-left: 50px; text-shadow: 2px 2px gray;" id="yui_3_17_2_1_1696139426170_40">Encuesta de opción múltiple</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<p>1. ¿Cuántos caracteres tiene cada sistema numérico (decimal, binario, hexadecimal y octal)?</p>
+<form>
+    <p>
+        <input type="radio" id="answer2" name="question1" value="Decimal: 8, Binario: 16, Hexadecimal: 10, Octal: 2.">
+        <label for="answer2">Decimal: 8, Binario: 16, Hexadecimal: 10, Octal: 2.</label><br>
+    </p>
+    <p>
+        <input type="radio" id="answer3" name="question1" value="Decimal: 16, Binario: 10, Hexadecimal: 8, Octal: 2.">
+        <label for="answer3">Decimal: 16, Binario: 10, Hexadecimal: 8, Octal: 2.</label><br>
+    </p>
+    <p>
+        <input type="radio" id="answer1" name="question1" value="Decimal: 10, Binario: 2, Hexadecimal: 16, Octal: 8.">
+        <label for="answer1">Decimal: 10, Binario: 2, Hexadecimal: 16, Octal: 8.</label><br>
+    </p>
+    <p>
+        <input type="radio" id="answer4" name="question1" value="Decimal: 2, Binario: 8, Hexadecimal: 10, Octal: 16.">
+        <label for="answer4">Decimal: 2, Binario: 8, Hexadecimal: 10, Octal: 16.</label><br>
+    </p>
+</form>
+
+<p>2. ¿Cuál es el resultado de 1985 en decimal, en hexadecimal?</p>
+<form>
+    <p>
+        <input type="radio" id="answer1" name="question2" value="7C1">
+        <label for="answer1">7C1</label><br>
+    </p>
+    <p>
+        <input type="radio" id="answer2" name="question2" value="F12">
+        <label for="answer2">F12</label><br>
+    </p>
+    <p>
+        <input type="radio" id="answer3" name="question2" value="794">
+        <label for="answer3">794</label><br>
+    </p>
+    <p>
+        <input type="radio" id="answer4" name="question2" value="3E9">
+        <label for="answer4">3E9</label><br>
+    </p>
+</form>
+
+<p>3. ¿Cuál es el resultado de 2023 en decimal, en binario?</p>
+<form>
+    <p>
+        <input type="radio" id="answer1" name="question3" value="11111100111">
+        <label for="answer1">11111100111</label><br>
+    </p>
+    <p>
+        <input type="radio" id="answer2" name="question3" value="10111101111">
+        <label for="answer2">10111101111</label><br>
+    </p>
+    <p>
+        <input type="radio" id="answer3" name="question3" value="11001000111">
+        <label for="answer3">11001000111</label><br>
+    </p>
+    <p>
+        <input type="radio" id="answer4" name="question3" value="10011111111">
+        <label for="answer4">10011111111</label><br>
+    </p>
+</form>
+
+<p>4. ¿Qué base se necesita para convertir un número decimal a binario?</p>
+<form>
+
+    <p>
+        <input type="radio" id="answer1" name="question4" value="10">
+        <label for="answer1">10</label><br>
+    </p>
+    <p>
+        <input type="radio" id="answer2" name="question4" value="8">
+        <label for="answer2">8</label><br>
+    </p>
+    <p>
+        <input type="radio" id="answer3" name="question4" value="16">
+        <label for="answer3">16</label><br>
+    </p>
+    <p>
+        <input type="radio" id="answer4" name="question4" value="2">
+        <label for="answer4">2</label><br>
+    </p>
+</form>
+
+<p>5. ¿Quién inventó los números binarios?</p>
+<form>
+
+    <p>
+        <input type="radio" id="answer1" name="question5" value="AlanTuring">
+        <label for="answer1">Alan Turing</label><br>
+    </p>
+    <p>
+        <input type="radio" id="answer2" name="question5" value="Gottfried Wilhelm Leibniz">
+        <label for="answer2">Gottfried Wilhelm Leibniz</label><br>
+    </p>
+    <p>
+        <input type="radio" id="answer3" name="question5" value="IsaacNewton">
+        <label for="answer3">Isaac Newton</label><br>
+    </p>
+    <p>
+        <input type="radio" id="answer4" name="question5" value="Euclides">
+        <label for="answer4">Euclides</label><br>
+    </p>
+</form>
+
+<button onclick="verificarRespuestas()">Verificar respuestas</button>
+
+<div id="resultados"></div>
+
+<script>
+    function verificarRespuestas() {
+        var respuestas = [
+            "Decimal: 10, Binario: 2, Hexadecimal: 16, Octal: 8.", // Respuesta pregunta 1
+            "7C1", // Respuesta pregunta 2
+            "11111100111", // Respuesta pregunta 3
+            "2", // Respuesta pregunta 4
+            "Gottfried Wilhelm Leibniz" // Respuesta pregunta 5
+        ];
+
+        var resultadoHTML = "<h2>Resultados:</h2>";
+
+        var respuestasElegidas = [];
+        var puntaje = 0;
+
+        // Verificación de respuestas
+        for (var i = 1; i <= 5; i++) {
+            var radios = document.getElementsByName("question" + i);
+            for (var j = 0; j < radios.length; j++) {
+                if (radios[j].checked) {
+                    respuestasElegidas.push(radios[j].value);
+                    if (radios[j].value === respuestas[i - 1]) {
+                        puntaje++;
+                    }
+                }
+            }
+        }
+
+        // Mostrar resultados
+        resultadoHTML += "<p>Puntaje: " + puntaje + "/5</p><h3>Respuestas:</h3>";
+
+        for (var k = 0; k < respuestasElegidas.length; k++) {
+            if (respuestasElegidas[k] === respuestas[k]) {
+                resultadoHTML += "<p style='color: green'>Pregunta " + (k + 1) + ": Correcta</p>";
+            } else {
+                resultadoHTML += "<p style='color: red'>Pregunta " + (k + 1) + ": Incorrecta</p>";
+            }
+        }
+
+        // Mostrar resultados en la página
+        document.getElementById("resultados").innerHTML = resultadoHTML;
+    }
+</script>
+     
 <div class="mod-indent-outer w-100" id="yui_3_17_2_1_1696139426170_29"><div class="mod-indent"></div><div id="yui_3_17_2_1_1696139426170_28"><div class="contentwithoutlink " id="yui_3_17_2_1_1696139426170_27"><div class="no-overflow" id="yui_3_17_2_1_1696139426170_26"><div class="no-overflow" id="yui_3_17_2_1_1696139426170_25"><div style="background-color: #A20909; padding: 4px;" id="yui_3_17_2_1_1696139426170_24">
 <h2 style="color: #fff !important; font-size: 1.9em; margin-left: 50px; text-shadow: 2px 2px gray;" id="yui_3_17_2_1_1696139426170_40">Te sujerimos escuchar esta cancion mientras estas en la pagina&nbsp;</h2>
 </div></div></div></div></div></div>  
